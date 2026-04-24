@@ -31,27 +31,35 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-darker selection:bg-primary/30 relative overflow-hidden">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(139,92,246,0.09),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.07),transparent_25%)]" />
+    <div className="min-h-screen bg-[#020617] selection:bg-primary/30 relative overflow-hidden noise-bg">
+      {/* Dynamic Background Gradients */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute bottom-[10%] right-[-10%] w-[35%] h-[35%] bg-secondary/10 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute top-[20%] right-[10%] w-[20%] h-[20%] bg-primary/5 blur-[100px] rounded-full" />
+      </div>
+
       <AnimatePresence>
         {isLoading && <LoadingScreen key="loader" />}
       </AnimatePresence>
       
       {!isLoading && (
-        <>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="cursor-glow" />
           <Navbar />
           <main>
             <Hero />
-            <Achievements />
             <Projects />
-            <Approach />
-            <About />
             <Skills />
+            <About />
             <Contact />
           </main>
           <Footer />
-        </>
+        </motion.div>
       )}
     </div>
   );

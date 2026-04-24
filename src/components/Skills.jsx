@@ -40,40 +40,45 @@ const skillIcons = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-slate-900/25">
+    <section id="skills" className="py-32 px-6 relative overflow-hidden bg-slate-900/10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-500 mb-4">Skill stack</p>
-          <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tight">Built for frontend, backend, and tooling</h2>
-          <p className="text-slate-400">The stack below reflects how I ship product work: clean interfaces, reliable servers, and tools that help the work move faster.</p>
+        <div className="text-center mb-24 max-w-3xl mx-auto">
+          <p className="text-[10px] uppercase tracking-[0.5em] text-primary font-black mb-4">Skill Stack</p>
+          <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter text-white uppercase leading-none">The <span className="text-gradient">Arsenal</span></h2>
+          <p className="text-slate-400 text-lg font-medium leading-relaxed">
+            A specialized collection of technologies I leverage to engineer <span className="text-white italic">high-performance</span> digital systems.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {skills.map((skillGroup, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="glass p-8 rounded-[2rem] relative group overflow-hidden border border-white/10 hover:border-primary/40 transition-all"
+              transition={{ delay: idx * 0.1, duration: 0.8 }}
+              className="glass-card p-10 relative group overflow-hidden border border-white/5 hover:border-primary/20 transition-all duration-700"
             >
-              <div className="mb-6 w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform text-primary text-xl">
+              <div className="mb-10 w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:scale-110 transition-transform text-primary text-2xl group-hover:bg-primary/10">
                 {React.createElement(icons[skillGroup.category])}
               </div>
-              <h3 className="text-2xl font-bold mb-3">{skillGroup.category}</h3>
-              <p className="text-sm text-slate-400 mb-6">A focused set of tools I use to build and ship work in that layer.</p>
+              <h3 className="text-3xl font-black text-white mb-4 tracking-tighter uppercase">{skillGroup.category}</h3>
+              <p className="text-slate-500 font-medium text-sm mb-8 leading-relaxed">Systematic mastery of standard-grade technologies.</p>
               <div className="flex flex-wrap gap-3">
                 {skillGroup.items.map((skill, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center gap-2 px-3 py-2 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-slate-300 hover:border-primary/50 hover:text-white transition-all cursor-default"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-black uppercase tracking-widest bg-white/5 border border-white/5 rounded-xl text-slate-400 hover:border-primary/30 hover:text-white transition-all cursor-default"
                   >
-                    {skillIcons[skill] ? React.createElement(skillIcons[skill], { size: 14 }) : null}
+                    {skillIcons[skill] ? React.createElement(skillIcons[skill], { size: 14, className: "group-hover:text-primary transition-colors" }) : null}
                     {skill}
                   </span>
                 ))}
               </div>
+              
+              {/* Decorative corner element */}
+              <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.div>
           ))}
         </div>
@@ -81,3 +86,4 @@ export default function Skills() {
     </section>
   );
 }
+

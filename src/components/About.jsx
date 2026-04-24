@@ -11,7 +11,7 @@ export default function About() {
            viewport={{ once: true }}
            className="relative"
         >
-          <div className="aspect-square rounded-3xl bg-slate-800/50 overflow-hidden border border-white/10 group">
+          <div className="aspect-square rounded-[3rem] bg-slate-900/40 backdrop-blur-xl border border-white/5 overflow-hidden group shadow-2xl">
              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
              <div className="w-full h-full flex items-center justify-center text-8xl grayscale group-hover:grayscale-0 transition-all duration-700">
                👨‍💻
@@ -25,29 +25,26 @@ export default function About() {
            whileInView={{ opacity: 1, x: 0 }}
            viewport={{ once: true }}
         >
-           <h2 className="text-4xl md:text-5xl font-black mb-8 flex items-center gap-4 tracking-tight">
+           <h2 className="text-4xl md:text-5xl font-black mb-8 flex items-center gap-4 tracking-tighter uppercase text-white">
              <span className="w-12 h-[2px] bg-primary rounded-full" /> About Me
-          </h2>
-           <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
-            <p>
-              I am a <span className="text-white font-medium">Full Stack Developer</span> and <span className="text-white font-medium">AI & Data Science student</span> focused on building polished web apps that balance good design, useful logic, and reliable performance.
-            </p>
-            <p>
-              With a strong foundation in <span className="text-white font-medium">MERN Stack</span>, I enjoy turning product ideas into clean experiences, from logistics tools to AI-enhanced networking and analytics workflows.
-            </p>
-            <div className="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/5">
-              <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <h4 className="text-white font-bold mb-1">Location</h4>
-                <p className="text-sm">Pune, India</p>
-              </div>
-              <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <h4 className="text-white font-bold mb-1">Specialization</h4>
-                <p className="text-sm">Product Engineering</p>
-              </div>
-            </div>
+           </h2>
+           <div className="space-y-6 text-xl text-slate-400 leading-relaxed font-medium">
+             <p>
+               I am a <span className="text-white font-bold">Full Stack Developer</span> and an <span className="text-white font-bold">Artificial Intelligence & Data Science student</span>, focused on building real-world applications that solve practical problems.
+             </p>
+             <p>
+               I work mainly with the <span className="text-white">MERN stack</span> and have developed projects like logistics platforms, AI-based fitness systems, and real-time networking applications. Along with development, I have a strong foundation in <span className="text-white">Data Structures, OOP, and system design</span>.
+             </p>
+             <p>
+               My interest lies in combining software engineering with AI to create scalable and intelligent systems that improve user experience and efficiency. I enjoy building products end-to-end — from idea to deployment — and continuously improving performance, design, and usability.
+             </p>
+             <p className="pt-4 text-white font-bold border-t border-white/5">
+                Solved <span className="text-primary text-2xl font-black">100+ DSA</span> problems and built multiple production-level applications like <span className="text-secondary italic">ShipXO</span>.
+             </p>
           </div>
         </motion.div>
       </div>
     </section>
   );
 }
+
