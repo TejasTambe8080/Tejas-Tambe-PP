@@ -1,3 +1,7 @@
+import { motion } from 'framer-motion';
+import { ArrowUpRight, ExternalLink, Target, Zap } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
+
 export default function ProjectCard({ project, index }) {
   return (
     <motion.div

@@ -1,3 +1,8 @@
+import { motion } from 'framer-motion';
+import { ExternalLink, ArrowUpRight } from 'lucide-react';
+import ProjectCard from './ProjectCard';
+import { projects } from '../data/projects';
+
 export default function Projects() {
   const featuredProject = projects.find(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);

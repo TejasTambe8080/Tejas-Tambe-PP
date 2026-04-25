@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Smart Gym Preview</title>
+  <desc id="desc">Placeholder preview image for Smart Gym project.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#052e16"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect x="120" y="120" width="1360" height="660" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="160" y="320" fill="#ffffff" font-size="84" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Smart Gym</text>
+  <text x="160" y="390" fill="#bbf7d0" font-size="36" font-family="Segoe UI, Arial, sans-serif">Computer vision trainer cover</text>
+</svg>

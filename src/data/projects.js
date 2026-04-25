@@ -8,7 +8,7 @@ export const projects = [
     whatIBuilt: "Built a full-stack platform with role-based authentication, real-time tracking, and admin dashboard.",
     result: "Improved delivery coordination and reduced manual effort. Used by users to manage deliveries in real-time.",
     tech: ["React", "Node.js", "MongoDB", "JWT", "Tailwind"],
-    image: "/projects/shipxo.png",
+    image: "/projects/shipxo.svg",
     live: "https://shipxo.vercel.app",
     github: "https://github.com/TejasTambe8080/ShipXO",
     featured: true
@@ -22,7 +22,7 @@ export const projects = [
     whatIBuilt: "Integrated WebRTC for p2p video and Gemini AI for automated real-time meeting transcription.",
     result: "Reduced post-meeting overhead by 40% with automated minute generation.",
     tech: ["React", "WebRTC", "Gemini API", "Socket.io", "Node.js"],
-    image: "/C:/Users/Tejas Tambe/.gemini/antigravity/brain/50cf1fa3-d6e9-4b2b-a6bb-5fa6a855227e/proxnet_app_mockup_1777057787491.png",
+    image: "/projects/proxnet.svg",
     live: "#",
     github: "https://github.com/TejasTambe8080/ProxNet"
   },
@@ -35,7 +35,7 @@ export const projects = [
     whatIBuilt: "Leveraged MediaPipe for pose estimation and TensorFlow.js for real-time form correction.",
     result: "Achieved 95% accuracy in common exercise posture detection.",
     tech: ["MERN Stack", "MediaPipe", "IoT", "TensorFlow.js"],
-    image: "/C:/Users/Tejas Tambe/.gemini/antigravity/brain/50cf1fa3-d6e9-4b2b-a6bb-5fa6a855227e/smart_gym_dashboard_mockup_1777057808651.png",
+    image: "/projects/smart-gym.svg",
     live: "#",
     github: "https://github.com/TejasTambe8080/Smart-Gym"
   },
@@ -48,7 +48,7 @@ export const projects = [
     whatIBuilt: "Developed a distributed commerce architecture with Redux for state management and Stripe for secure global payments.",
     result: "Supports 1000+ concurrent users with sub-500ms response times.",
     tech: ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-    image: "/C:/Users/Tejas Tambe/.gemini/antigravity/brain/50cf1fa3-d6e9-4b2b-a6bb-5fa6a855227e/cartiva_marketplace_mockup_1777057824926.png",
+    image: "/projects/cartiva.svg",
     live: "#",
     github: "https://github.com/TejasTambe8080/Cartiva"
   }
