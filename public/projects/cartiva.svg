@@ -9,6 +9,6 @@
   </defs>
   <rect width="1600" height="900" fill="url(#g)"/>
   <rect x="120" y="120" width="1360" height="660" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"/>
-  <text x="160" y="320" fill="#ffffff" font-size="84" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Cartiva</text>
-  <text x="160" y="390" fill="#fed7aa" font-size="36" font-family="Segoe UI, Arial, sans-serif">Distributed commerce cover</text>
+  <text x="800" y="350" text-anchor="middle" fill="#ffffff" font-size="98" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Cartiva</text>
+  <text x="800" y="430" text-anchor="middle" fill="#fed7aa" font-size="34" font-family="Segoe UI, Arial, sans-serif">Distributed commerce cover</text>
 </svg>
