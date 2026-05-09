@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorty | Premium URL Shortener</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        .bg-gradient {
+            background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.15), transparent 40%);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient selection:bg-violet-500/30">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-16">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-violet-600 rounded-xl flex items-center justify-center shadow-lg shadow-violet-500/20">
+                    <span class="font-bold text-white">S</span>
+                </div>
+                <h1 class="text-2xl font-extrabold tracking-tight">Shorty</h1>
+            </div>
+            <div class="text-sm font-medium text-slate-500">
+                Logged in as <span class="text-slate-200">Admin</span>
+            </div>
+        </header>
+
+        <!-- Main Input -->
+        <main class="mb-20">
+            <div class="glass p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 blur-3xl"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-black mb-4 tracking-tight leading-tight">Shorten Your Links <br><span class="text-violet-400">Instantly.</span></h2>
+                    <p class="text-slate-400 mb-8 max-w-lg">Paste your long URL below and get a clean, trackable short link in seconds.</p>
+                    
+                    <form id="shorten-form" class="flex flex-col md:flex-row gap-4">
+                        <input 
+                            type="url" 
+                            id="originalUrl"
+                            placeholder="https://example.com/very-long-url-goes-here" 
+                            required
+                            class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-violet-500/50 transition-all text-slate-200"
+                        >
+                        <button 
+                            type="submit"
+                            class="bg-violet-600 hover:bg-violet-500 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-lg shadow-violet-500/20 active:scale-95"
+                        >
+                            Shorten URL
+                        </button>
+                    </form>
+                    <div id="result-container" class="mt-8 hidden">
+                        <div class="bg-emerald-500/10 border border-emerald-500/20 p-4 rounded-2xl flex items-center justify-between">
+                            <span id="short-link" class="text-emerald-400 font-bold truncate mr-4"></span>
+                            <button onclick="copyToClipboard()" class="text-xs bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 px-3 py-1.5 rounded-lg transition-all">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Stats & History -->
+        <section>
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-xl font-bold">Recent Links</h3>
+                <button onclick="fetchRecent()" class="text-sm text-slate-500 hover:text-violet-400 transition-colors">Refresh</button>
+            </div>
+
+            <div id="links-container" class="grid gap-4">
+                <!-- Links will be injected here -->
+                <div class="text-center py-20 text-slate-600 font-medium">No links shortened yet.</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Analytics Modal -->
+    <div id="modal" class="fixed inset-0 bg-[#020617]/80 backdrop-blur-sm z-50 flex items-center justify-center hidden p-6">
+        <div class="glass max-w-2xl w-full rounded-[2.5rem] p-10 relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white">✕</button>
+            <h3 class="text-2xl font-black mb-8" id="modal-title">Analytics</h3>
+            
+            <div class="grid grid-cols-2 gap-6 mb-10">
+                <div class="glass-card p-6 rounded-3xl">
+                    <p class="text-[10px] uppercase font-black tracking-widest text-slate-500 mb-2">Total Clicks</p>
+                    <p class="text-4xl font-black text-violet-400" id="modal-clicks">0</p>
+                </div>
+                <div class="glass-card p-6 rounded-3xl">
+                    <p class="text-[10px] uppercase font-black tracking-widest text-slate-500 mb-2">Created On</p>
+                    <p class="text-lg font-bold text-slate-200" id="modal-date">-</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 max-h-60 overflow-y-auto pr-4" id="modal-logs">
+                <!-- Logs will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

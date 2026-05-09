@@ -40,14 +40,28 @@ export const projects = [
     github: "https://github.com/TejasTambe8080/Smart-Gym"
   },
   {
+    id: 5,
+    title: "Custom URL Shortener",
+    category: "Web App",
+    whyItMatters: "Web navigation should be clean and measurable. This tool provides instant redirection with deep analytics for every link.",
+    problem: "Long, messy URLs are difficult to share and impossible to track without complex tools.",
+    whatIBuilt: "Built a robust Node.js backend with MongoDB for high-speed redirection and an interactive dashboard for analytics.",
+    result: "Achieved sub-10ms redirection latency and real-time click tracking with browser/location data.",
+    tech: ["Node.js", "Express.js", "MongoDB", "Tailwind", "EJS"],
+    image: "/projects/shortener.png",
+    live: "http://localhost:8001",
+    github: "https://github.com/TejasTambe8080/URL-Shortener",
+    featured: true
+  },
+  {
     id: 4,
     title: "Cartiva",
     category: "E-Commerce",
     whyItMatters: "Marketplaces need to handle high concurrency without compromising speed. Cartiva is built for reliability at scale.",
     problem: "Generic store templates often fail at high traffic volumes.",
-    whatIBuilt: "Developed a distributed commerce architecture with Redux for state management and Stripe for secure global payments.",
+    whatIBuilt: "Developed a distributed commerce architecture with React for state management and Stripe for secure global payments.",
     result: "Supports 1000+ concurrent users with sub-500ms response times.",
-    tech: ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
     image: "/projects/cartiva.svg",
     live: "#",
     github: "https://github.com/TejasTambe8080/Cartiva"
@@ -55,9 +69,9 @@ export const projects = [
 ];
 
 export const skills = [
-  { category: "Frontend", items: ["React", "JavaScript", "Tailwind CSS", "Redux"] },
-  { category: "Backend", items: ["Node.js", "Express.js", "MongoDB", "REST APIs"] },
-  { category: "Tools", items: ["Git", "Figma", "Power BI", "TensorFlow.js"] }
+  { category: "Frontend", items: ["React", "JavaScript", "Tailwind CSS", "HTML5/CSS3"] },
+  { category: "Backend", items: ["Node.js", "Express.js", "MongoDB", "REST APIs", "SQL"] },
+  { category: "Tools", items: ["Git", "Figma", "Postman", "TensorFlow.js"] }
 ];
 
 export const achievements = [

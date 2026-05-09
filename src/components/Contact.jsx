@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6 relative overflow-hidden bg-darker">
+    <section id="contact" className="py-32 px-6 glass-section">
       {/* Decorative center glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl max-h-[600px] bg-primary/10 blur-[180px] -z-10" />
       

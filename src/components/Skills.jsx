@@ -6,7 +6,6 @@ import {
   SiReact,
   SiJavascript,
   SiTailwindcss,
-  SiRedux,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
@@ -14,7 +13,9 @@ import {
   SiFigma,
   SiTensorflow,
   SiPostman,
-  SiGoogleanalytics,
+  SiHtml5,
+  SiCss3,
+  SiMysql,
 } from 'react-icons/si';
 
 const icons = {
@@ -27,20 +28,21 @@ const skillIcons = {
   React: SiReact,
   JavaScript: SiJavascript,
   "Tailwind CSS": SiTailwindcss,
-  Redux: SiRedux,
   "Node.js": SiNodedotjs,
   "Express.js": SiExpress,
   MongoDB: SiMongodb,
   Git: SiGit,
   Figma: SiFigma,
-  "Power BI": SiGoogleanalytics,
+  "Postman": SiPostman,
   "TensorFlow.js": SiTensorflow,
   "REST APIs": SiPostman,
+  "HTML5/CSS3": SiHtml5,
+  "SQL": SiMysql,
 };
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 px-6 relative overflow-hidden bg-slate-900/10">
+    <section id="skills" className="py-32 px-6 glass-section">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24 max-w-3xl mx-auto">
           <p className="text-[10px] uppercase tracking-[0.5em] text-primary font-black mb-4">Skill Stack</p>
